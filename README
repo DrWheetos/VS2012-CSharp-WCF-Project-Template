@@ -1,0 +1,16 @@
+This is a VS2012 C# project template that creates a solution with several projects to create a simple WCF service hosted in a console application.  There's a test client that uses the ChannelFactory pattern to call an operation on the hosted WCF service.  There's also a couple of test projects to run mocked unit tests (using Moq) and integration tests against the service.  It provides pretty much everything to get going with a WCF service.
+
+To use:
+
+1.  Drop the zip file into your User Project Templates location for C# WCF projects, e.g. Documents\Visual Studio 2012\Templates\Project Templates\Visual C#\WCF.  You may need to create the WCF folder yourself.
+2.  Run VS2012 as an administrator.  This is necessary to avoid an AddressAccessDeniedException when starting up the service host.
+3.  Click New Project and navigate to the Templates / Visual C# / WCF folder.
+4.  Select the Company WCF Solution template and give it a name.
+5.  When the solution is open in VS2012, press F5 to run the console host up.  NuGet will get the Moq component automatically.
+6.  The service should advertise it's endpoint URL.
+7.  In the Solution Explorer, right click on the TestClient project, select Debug / Start new instance.
+8.  The test client starts up, makes a call to the service and should show "Hello Susan!".
+
+You now have a working WCF service and client application that calls it.
+
+Enjoy.
